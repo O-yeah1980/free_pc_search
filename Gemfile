@@ -64,3 +64,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry-rails'
 gem 'devise'
 gem 'haml-rails'
+
+# github secirity
+gem "actionpack", ">= 5.2.3"
+gem "activestorage", ">= 5.2.3"
+gem "activesupport", ">= 5.2.3"
+gem "actionview", ">= 5.2.3"
