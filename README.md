@@ -28,9 +28,9 @@
 
 ### Association
 - belongs_to: department, dependent: :destroy
-- has_many: pcs
+- has_many: computers
 
-## pcsテーブル
+## computersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |pc_number|string|null: false|
@@ -51,5 +51,5 @@
 |ancestry|string|null: false|
 
 ### Association
-- belongs_to: user
-- belongs_to: pc
+- has_many: users
+- belongs_to: computer
