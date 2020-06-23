@@ -42,7 +42,7 @@
 
 ### Association
 - belongs_to: user
-- has_one: department
+- belongs_to: department
 
 ## departmentsテーブル
 |Column|Type|Options|
@@ -52,4 +52,5 @@
 
 ### Association
 - has_many: users
-- belongs_to: computer
+- has_many: computers
+- has_ancestry
