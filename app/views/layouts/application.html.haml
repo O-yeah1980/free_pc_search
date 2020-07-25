@@ -8,4 +8,40 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
   %body
-    = yield
+    .wrapper
+      .header
+        .header__title
+          = link_to root_path do
+            CAD空き台検索
+        %ul.header__center
+          %li.header__center__dep-hp-a
+            電気システム部HP
+          %li.header__center__dep-hp-b
+            機械システム部HP
+        .header__info
+          .header__info__title
+            使用中PC情報
+          .header__info__details
+            AB123456を使用中です
+        .header__user
+          - if user_signed_in?
+            = link_to "マイページ", user_path(current_user.id), class: "header__user__left-content"
+            = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__user__right-content"
+            -# .header__user__left-content
+            -#   ログイン
+            -# .header__user__right-content
+            -#   新規登録
+          - else
+            = link_to "ログイン", new_user_session_path, class: "header__user__left-content"
+            = link_to "新規登録", new_user_registration_path, class: "header__user__right-content"
+
+            -# .header__user__left-content
+            -#   ログイン
+            -# .header__user__right-content
+            -#   新規登録
+      = yield
+      .footer
+        .footer__upr
+          電子システム部CAD台検索
+        .footer__cpy
+          Copyright © 2020 Electronic System Div.
