@@ -1,0 +1,28 @@
+.user-content {
+  background-color: #fafafa;
+  width: 100%;
+  height: calc(100vh - 100px - 100px);
+  display: flex;
+  justify-content: center;
+  &__wrapper {
+    background-color: #ddd;
+    width: 400px;
+    height: 500px;
+    &__title {
+      font-size: 20px;
+    }
+    &__form {
+      .regist-button {
+        background-color: blue;
+        width: 100px;
+        height: 40px;
+      }
+      .login-button {
+        background-color: yellow;
+        width: 100px;
+        height: 40px;
+      }
+      
+    }
+  }
+}
