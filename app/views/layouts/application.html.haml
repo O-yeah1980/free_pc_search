@@ -25,20 +25,11 @@
             AB123456を使用中です
         .header__user
           - if user_signed_in?
-            = link_to "マイページ", user_path(current_user.id), class: "header__user__left-content"
+            = link_to "マイページ", root_path, class: "header__user__left-content"
             = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__user__right-content"
-            -# .header__user__left-content
-            -#   ログイン
-            -# .header__user__right-content
-            -#   新規登録
           - else
             = link_to "ログイン", new_user_session_path, class: "header__user__left-content"
             = link_to "新規登録", new_user_registration_path, class: "header__user__right-content"
-
-            -# .header__user__left-content
-            -#   ログイン
-            -# .header__user__right-content
-            -#   新規登録
       = yield
       .footer
         .footer__upr
