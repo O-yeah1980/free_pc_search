@@ -14,8 +14,9 @@
       height: 100%;
       font-size: 25px;
       text-align: center;
-      line-height: 100px;
-      color: #fff;
+      line-height: 150px;
+      // padding: 10px;
+      color: #ddd;
     }
     &__center {
       background-color: #111;
@@ -39,7 +40,7 @@
       }
     }
     &__info {
-      background-color: #fff;
+      background-color: #ddd;
       width: 400px;
       height: 90px;
       align-items: center;
@@ -49,7 +50,7 @@
         margin: 5px 0 0 5px;
       }
       &__details {
-        background-color: green;
+        // background-color: green;
         width: 300px;
         height: 60px;
         margin-left: 50px;
@@ -59,41 +60,46 @@
       }
     }
     &__user {
-      background-color: blue;
+      // background-color: blue;
       width: 300px;
       height: 100%;
       display: flex;
       &__left-content {
-        background-color: #b22;
+        background-color: #111;
         width: 100px;
         height: 100%;
         text-align: center;
-        line-height: 100px;
+        line-height: 150px;
+        padding: 10px;
+        color: #fff;
       }
       &__right-content {
-        background-color: #a53;
+        background-color: #111;
         width: 100px;
         height: 100%;
         text-align: center;
-        line-height: 100px;
+        line-height: 150px;
+        padding: 10px;
+        color: #fff;
       }
     }
   }
   .content {
-    background-color: #aa3333;
+    background-color: #fafafa;
     width: 100%;
     height: calc(100vh - 100px - 100px);
     &__upr {
-      background-color: cornflowerblue;
-      width: 100%;
+      background-color: #ddd;
+      width: calc(100% - 10px - 10px - 2px);
       height: 50px;
+      margin: 0 10px 0 10px;
       display: flex;
       justify-content: space-between;
       &__left {
         background-color: cornsilk;
         width: 70px;
         height: 100%;
-        border: solid 1px #b22;
+        border: solid 1px #ddd;
         text-align: center;
         line-height: 50px;
       }
@@ -101,7 +107,7 @@
         background-color: cornsilk;
         width: 70px;
         height: 100%;
-        border: solid 1px #b22;
+        border: solid 1px #ddd;
         text-align: center;
         line-height: 50px;
       }
@@ -109,25 +115,27 @@
         background-color: cornsilk;
         width: 70px;
         height: 100%;
-        border: solid 1px #b22;
+        border: solid 1px #ddd;
         text-align: center;
         line-height: 50px;
       }
     }
     &__ctr {
       background-color: #034;
-      width: 100%;
-      height: 300px;
+      width: calc(100% - 10px - 10px - 2px);
+      height: 290px;
+      margin: 10px;
+      border: 1px solid #ddd;
       &__title {
-        background-color: burlywood;
-        width: calc(100% - 10px);
+        background-color: #ddd;
+        width: 100%;
         height: 30px;
         line-height: 30px;
         font-size: 20px;
-        margin-left: 10px;
+        padding-left: 5px;
       }
       &__table {
-        background-color: green;
+        background-color: #fff;
         width: 100%;
         height: calc(100% - 30px);
         display: flex;
@@ -143,6 +151,7 @@
             width: 150px;
             height: 30px;
             padding: 5px 0 5px 0;
+            margin-top: 5px;
             border: solid 2px #000;
             text-align: center;
           }
@@ -157,6 +166,7 @@
             background-color: #fff;
             width: 150px;
             height: 30px;
+            margin-top: 5px;
             padding: 5px 0 5px 0;
             border: solid 2px #000;
             text-align: center;
@@ -165,7 +175,7 @@
         &__ctr-1-left {
           width: 154px;
           height: 300px;
-          margin-left: 10px;
+          margin-left: 100px;
           display: flex;
           align-content: flex-start;
           flex-direction: column;
@@ -173,6 +183,7 @@
             background-color: #fff;
             width: 150px;
             height: 30px;
+            margin-top: 5px;
             padding: 5px 0 5px 0;
             border: solid 2px #000;
             text-align: center;
@@ -188,6 +199,7 @@
             background-color: #fff;
             width: 150px;
             height: 30px;
+            margin-top: 5px;
             padding: 5px 0 5px 0;
             border: solid 2px #000;
             text-align: center;
@@ -196,7 +208,7 @@
         &__ctr-2-left {
           width: 154px;
           height: 300px;
-          margin-left: 10px;
+          margin-left: 100px;
           display: flex;
           align-content: flex-start;
           flex-direction: column;
@@ -204,6 +216,7 @@
             background-color: #fff;
             width: 150px;
             height: 30px;
+            margin-top: 5px;
             padding: 5px 0 5px 0;
             border: solid 2px #000;
             text-align: center;
@@ -219,6 +232,7 @@
             background-color: #fff;
             width: 150px;
             height: 30px;
+            margin-top: 5px;
             padding: 5px 0 5px 0;
             border: solid 2px #000;
             text-align: center;
@@ -228,13 +242,14 @@
           width: 154px;
           height: 300px;
           display: flex;
-          margin-left: 10px;
+          margin-left: 100px;
           align-content: flex-start;
           flex-direction: column;
           &__pc {
             background-color: #fff;
             width: 150px;
             height: 30px;
+            margin-top: 5px;
             padding: 5px 0 5px 0;
             border: solid 2px #000;
             text-align: center;
@@ -243,19 +258,20 @@
       }
     }
     &__remote {
-      background-color: pink;
-      width: 100%;
-      height: calc(100% - 50px - 300px);
+      background-color: #fff;
+      width: calc(100% - 10px - 10px - 2px);
+      height: calc(100% - 50px - 300px - 10px - 10px);
+      margin: 10px;
+      border: 1px solid #ddd;
       &__title {
-        background-color: burlywood;
-        width: calc(100% - 10px);
+        background-color: #ddd;
+        width: 100%;
         height: 30px;
         line-height: 30px;
         font-size: 20px;
-        margin-left: 10px;
       }
       &__table {
-        background-color: green;
+        background-color: #fff;
         width: 100%;
         height: calc(100% - 30px);
         display: flex;
@@ -263,6 +279,7 @@
         &__table-l {
           width: 154px;
           height: 100%;
+
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
@@ -270,6 +287,7 @@
             background-color: #fff;
             width: 150px;
             height: 30px;
+            margin-top: 5px;
             padding: 5px 0 5px 0;
             margin-left: 10px;
             border: solid 2px #000;
@@ -288,6 +306,7 @@
             background-color: #fff;
             width: 150px;
             height: 30px;
+            margin-top: 5px;
             padding: 5px 0 5px 0;
             margin-left: 10px;
             border: solid 2px #000;
@@ -302,7 +321,7 @@
     width: 100%;
     height: 100px;
     &__upr {
-      background-color: coral;
+      // background-color: coral;
       width: 300px;
       height: 60px;
       margin: 0 auto;
