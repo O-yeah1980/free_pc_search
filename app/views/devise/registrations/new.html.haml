@@ -5,17 +5,19 @@
     .user-content__wrapper__form
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         = render "devise/shared/error_messages", resource: resource
-        .field
-          = f.label :名字
-          %br/
-        .field
-          = f.label :名前
-          %br/
-        .field
+        .names-form
+          .names-form__last-name
+            = f.label :名字, class: "label"
+            = f.text_field :last_name, type: "text", class: "input", placeholder: "例）山田"
+          .names-form__first-name
+            = f.label :名前, class: "label"
+            = f.text_field :first_name, type: "text", class: "input", placeholder: "例）邦子"
+        .department-form
           = f.label :所属
           %br/
-        .field
+        .post-form
           = f.label :役職
+          = f.select :post_id, User.post_ids.keys, prompt: ""
           %br/
 
         .field

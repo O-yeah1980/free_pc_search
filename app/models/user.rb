@@ -4,4 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   belongs_to :department
+
+  enum post_id: {"プロパー・BP": 1, "委託": 2}
 end
