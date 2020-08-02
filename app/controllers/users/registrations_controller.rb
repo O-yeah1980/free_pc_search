@@ -13,8 +13,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     @user = User.create(sign_up_params)
-    binding.pry
-    redirect_to(root_path)
+    bypass_sign_in(@user)
+    if current_user
+      redirect_to(root_path)
+    else
+      render :new
+    end
   end
 
   # GET /resource/edit
