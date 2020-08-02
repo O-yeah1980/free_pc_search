@@ -9,11 +9,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.new
     @parent = Department.where(ancestry: nil)
   end
-
+  
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    @user = User.create(sign_up_params)
+    binding.pry
+    redirect_to(root_path)
+  end
 
   # GET /resource/edit
   # def edit

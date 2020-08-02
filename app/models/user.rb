@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   belongs_to :department
 
-  enum post_id: {"プロパー・BP": 1, "委託": 2}
+  enum post_id: { プロパー・BP: 1, 委託: 2 }
 end

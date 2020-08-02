@@ -4,6 +4,11 @@ Rails.application.routes.draw do
     sessions: "users/sessions"
   }
 
+  devise_scope :user do
+    get "sign_in", to: "users/sessions#new"
+    get "sign_out", to: "users/sessions#destroy"
+  end
+  
   root "searches#index"
   resources :searches, except: :index
 end

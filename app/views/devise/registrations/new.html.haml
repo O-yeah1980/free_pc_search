@@ -3,7 +3,7 @@
     .user-content__wrapper__title
       新規登録
     .user-content__wrapper__form
-      = form_with url: user_session_path do |f|
+      = form_with model: @user, url: { controller: "users/registrations", action: "create" } do |f|
         = render "devise/shared/error_messages", resource: resource
         .names-form
           .names-form__last-name
@@ -19,7 +19,7 @@
           %br/
         .post-form
           = f.label :役職
-          = f.select :post_id, User.post_ids.keys, prompt: "選択して下さい"
+          = f.select :post_id, User.post_ids.keys.map { |k| [k, k] }, prompt: "選択して下さい"
           %br/
 
         .email-form
