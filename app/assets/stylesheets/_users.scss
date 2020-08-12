@@ -6,21 +6,151 @@
   justify-content: center;
   &__wrapper {
     background-color: #ddd;
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    height: 550px;
     &__title {
       font-size: 20px;
+      padding: 10px;
+      border-bottom: 1px solid #fafafa;
+      text-align: center;
+      line-height: 20px;
     }
     &__form {
-      .regist-button {
-        background-color: blue;
-        width: 100px;
-        height: 40px;
-      }
-      .login-button {
-        background-color: yellow;
-        width: 100px;
-        height: 40px;
+      width: calc(100% - 10px - 100px);
+      height: calc(550px - 61px);
+      // margin: 10px 5px 5px 5px;
+      display: flex;
+      justify-content: center;
+      margin: 10px auto;
+      .form-content {
+        height: 100%;
+        width: 100%;
+        .names {
+          &__form {
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+            &__last-name {
+              height: 40px;
+              width: calc(50% - 2.5px);
+              margin-right: 5px;
+              .input-name {
+                background-color: #fff;
+                height: 100%;
+                width: 100%;
+                padding-left: 5px;
+                border: 1px solid #fafafa;
+                border-radius: 5px;
+              }
+              .input-name:focus {
+                border-color: #0099e8;
+              }
+            }
+            &__first-name {
+              height: 40px;
+              width: calc(50% - 2.5px);
+              // margin-left: 5px;
+              .input-name {
+                background-color: #fff;
+                height: 100%;
+                width: 100%;
+                padding-left: 5px;
+                border: 1px solid #fafafa;
+                border-radius: 5px;
+              }
+              .input-name:focus {
+                border-color: #0099e8;
+              }
+            }
+          }
+        }
+        .department-form {
+          height: 63px;
+          width: calc(50% - 5px);
+          margin-top: 10px;
+          .dep-input-form {
+            background-color: #fff;
+            height: 40px;
+            width: 100%;
+            padding-left: 5px;
+            border: 1px solid #fafafa;
+            border-radius: 5px;
+            margin-top: 5px;
+          }
+          .dep-input-form:focus {
+            border-color: #0099e8;
+          }
+        }
+        .post-form {
+          height: 63px;
+          width: calc(50% - 5px);
+          margin-top: 10px;
+          #user_post_id {
+            background-color: #fff;
+            height: 40px;
+            width: 100%;
+            padding-left: 5px;
+            border: 1px solid #fafafa;
+            border-radius: 5px;
+            margin-top: 5px;
+          }
+          #user_post_id:focus {
+            border-color: #0099e8;
+          }
+        }
+        .email-form {
+          height: 63px;
+          width: 100%;
+          margin-top: 10px;
+          #user_email {
+            background-color: #fff;
+            height: 40px;
+            width: 100%;
+            padding-left: 5px;
+            border: 1px solid #fafafa;
+            border-radius: 5px;
+            margin-top: 5px;
+          }
+          #user_email:focus {
+            border-color: #0099e8;
+          }
+        }
+        .pass-form {
+          height: 63px;
+          width: 100%;
+          margin-top: 10px;
+          .password {
+            background-color: #fff;
+            height: 40px;
+            width: 100%;
+            padding-left: 5px;
+            border: 1px solid #fafafa;
+            border-radius: 5px;
+            margin-top: 5px;
+          }
+          .password:focus {
+            border-color: #0099e8;
+          }
+        }
+        .submit-form {
+          background-color: #fff;
+          margin-top: 20px;
+          width: 100%;
+          height: 40px;
+          border-radius: 5px;
+          text-align: center;
+          color: #fff;
+          .regist-button {
+            background-color: #0099e8;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+          }
+          .regist-button:hover {
+            background-color: rgba(0, 120, 232, 1);
+            transition: background-color .2s;
+          }
+        }
       }
       
     }

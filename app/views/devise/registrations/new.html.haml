@@ -3,40 +3,43 @@
     .user-content__wrapper__title
       新規登録
     .user-content__wrapper__form
-      = form_with model: @user, url: user_registration_path do |f|
+      = form_with model: @user, url: user_registration_path, class: "form-content" do |f|
         = render "devise/shared/error_messages", resource: resource
-        .names-form
-          .names-form__last-name
-            = f.label :名字, class: "label"
-            = f.text_field :last_name, type: "text", class: "input", placeholder: "例）山田"
-          .names-form__first-name
-            = f.label :名前, class: "label"
-            = f.text_field :first_name, type: "text", class: "input", placeholder: "例）邦子"
+        .names
+          = f.label :お名前
+          %br/
+          .names__form
+            .names__form__last-name
+              = f.text_field :last_name, type: "text", class: "input-name", placeholder: "例）山田"
+            .names__form__first-name
+              = f.text_field :first_name, type: "text", class: "input-name", placeholder: "例）邦子"
         .department-form
           = f.label :所属
-          = f.collection_select :department_id, @parent, :id, :name, {prompt: "選択してください"}, class: "dep-input-form", id: "parent-form", required: "required"
-          #pull_down_category
           %br/
+          = f.collection_select :department_id, @parent, :id, :name, { prompt: "選択してください" }, class: "dep-input-form", id: "parent-form", required: "required"
+          #pull_down_category
+          -# %br/
         .post-form
           = f.label :役職
-          = f.select :post_id, User.post_ids.keys.map { |k| [k, k] }, prompt: "選択して下さい"
           %br/
+          = f.select :post_id, User.post_ids.keys.map { |k| [k, k] }, { prompt: "選択して下さい" }
+          -# %br/
 
         .email-form
           = f.label :email
           %br/
-          = f.email_field :email, autofocus: true, autocomplete: "email"
+          = f.email_field :email, autocomplete: "email"
         .pass-form
           = f.label :password
           - if @minimum_password_length
             %em
               (#{@minimum_password_length} 文字以上)
           %br/
-          = f.password_field :password, autocomplete: "new-password"
+          = f.password_field :password, autocomplete: "new-password", class: "password"
         .pass-form
           = f.label :password_再入力
           %br/
-          = f.password_field :password_confirmation, autocomplete: "new-password"
+          = f.password_field :password_confirmation, autocomplete: "new-password", class: "password"
         .submit-form
           = f.submit "登録する", class: "regist-button"
-      = render "devise/shared/links"
+      -# = render "devise/shared/links"
