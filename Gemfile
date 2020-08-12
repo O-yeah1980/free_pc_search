@@ -70,3 +70,5 @@ gem "actionpack", ">= 5.2.3"
 gem "activestorage", ">= 5.2.3"
 gem "activesupport", ">= 5.2.3"
 gem "actionview", ">= 5.2.3"
+
+gem "ancestry"
