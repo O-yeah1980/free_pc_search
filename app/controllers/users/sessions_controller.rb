@@ -5,13 +5,22 @@ class Users::SessionsController < Devise::SessionsController
 
   # GET /resource/sign_in
   # def new
-  #   super
+  #   if current_user
+  #     redirect_to(root_path)
+  #   else
+  #     render :new
+  #   end
   # end
-
+  
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    binding.pry
+    if current_user
+      redirect_to(root_path)
+    else
+      render :new
+    end
+  end
 
   # DELETE /resource/sign_out
   # def destroy

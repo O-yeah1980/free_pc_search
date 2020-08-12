@@ -102,7 +102,7 @@
           height: 63px;
           width: 100%;
           margin-top: 10px;
-          #user_email {
+          .user-email {
             background-color: #fff;
             height: 40px;
             width: 100%;
@@ -111,7 +111,7 @@
             border-radius: 5px;
             margin-top: 5px;
           }
-          #user_email:focus {
+          .user-email:focus {
             border-color: #0099e8;
           }
         }
@@ -140,13 +140,13 @@
           border-radius: 5px;
           text-align: center;
           color: #fff;
-          .regist-button {
+          .user-button {
             background-color: #0099e8;
             width: 100%;
             height: 100%;
             border-radius: 5px;
           }
-          .regist-button:hover {
+          .user-button:hover {
             background-color: rgba(0, 120, 232, 1);
             transition: background-color .2s;
           }

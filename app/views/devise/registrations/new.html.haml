@@ -28,7 +28,7 @@
         .email-form
           = f.label :email
           %br/
-          = f.email_field :email, autocomplete: "email"
+          = f.email_field :email, autocomplete: "email", class: "user-email"
         .pass-form
           = f.label :password
           - if @minimum_password_length
@@ -41,5 +41,5 @@
           %br/
           = f.password_field :password_confirmation, autocomplete: "new-password", class: "password"
         .submit-form
-          = f.submit "登録する", class: "regist-button"
+          = f.submit "登録する", class: "user-button"
       -# = render "devise/shared/links"
