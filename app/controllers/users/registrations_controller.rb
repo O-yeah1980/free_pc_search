@@ -29,8 +29,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
       end
     end
   end
-
+  
   def grandchildren
+    respond_to do |format|
+      format.html
+      format.json do
+        @grandchildren = Department.find(params[:child_id]).children
+      end
+    end
   end
 
   # GET /resource/edit
