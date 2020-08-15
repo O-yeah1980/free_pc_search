@@ -21,6 +21,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def children
+    respond_to do |format|
+      format.html
+      format.json do
+        @children = Department.find(params[:parent_id]).children
+      end
+    end
+  end
+
+  def grandchildren
+  end
+
   # GET /resource/edit
   # def edit
   #   super
