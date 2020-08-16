@@ -46,7 +46,7 @@
 
 ### Association
 - belongs_to: department, dependent: :destroy
-- has_many: computers
+- has_one: computer
 
 ## computersテーブル
 |Column|Type|Options|
