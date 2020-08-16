@@ -72,3 +72,7 @@
 - has_many: users
 - has_many: computers
 - has_ancestry
+
+### use_method
+- 1: 据置
+- 2: リモート

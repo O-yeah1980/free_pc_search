@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2020_08_16_015017) do
     t.integer "post_id", null: false
     t.integer "special_function"
     t.integer "use_method", null: false
-    t.bigint "department_id", null: false
-    t.bigint "user_id", null: false
+    t.bigint "department_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["department_id"], name: "index_computers_on_department_id"

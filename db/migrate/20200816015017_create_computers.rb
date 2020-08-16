@@ -5,8 +5,8 @@ class CreateComputers < ActiveRecord::Migration[5.2]
       t.integer :post_id, null: false
       t.integer :special_function
       t.integer :use_method, null: false
-      t.references :department, null: false, foreign_key: true
-      t.references :user, null: false, foreign_key: true
+      t.references :department, foreign_key: true
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end
