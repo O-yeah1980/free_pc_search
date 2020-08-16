@@ -21,7 +21,7 @@ $(function() {
       option += `<option value = "${grandchild.id}">${grandchild.name}</option>`
     })
     var html = `<div id = "grandchildren_wrapper">
-                  <select class = "dep-input-form", id = "grandchild-form", required = "required">
+                  <select class = "dep-input-form", id = "grandchild-form", name = "user[department_id]", required = "required">
                   <option value label = "選択して下さい"></option>
                   ${option}
                 </div>`;
