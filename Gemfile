@@ -72,3 +72,5 @@ gem "activesupport", ">= 5.2.3"
 gem "actionview", ">= 5.2.3"
 
 gem "ancestry"
+gem "jquery-rails"
+gem "font-awesome-sass", '~> 5.13.0'

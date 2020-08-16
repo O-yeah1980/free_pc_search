@@ -22,10 +22,12 @@
       display: flex;
       justify-content: center;
       margin: 10px auto;
+      overflow: scroll;
       .form-content {
         height: 100%;
         width: 100%;
         .names {
+          margin-bottom: 10px;
           &__form {
             margin-top: 5px;
             display: flex;
@@ -65,13 +67,11 @@
           }
         }
         .department-form {
-          height: 63px;
-          width: calc(50% - 5px);
-          margin-top: 10px;
+          display: inline;
           .dep-input-form {
             background-color: #fff;
             height: 40px;
-            width: 100%;
+            width: calc(50% - 5px);
             padding-left: 5px;
             border: 1px solid #fafafa;
             border-radius: 5px;

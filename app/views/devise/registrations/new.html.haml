@@ -17,8 +17,7 @@
           = f.label :所属
           %br/
           = f.collection_select :department_id, @parent, :id, :name, { prompt: "選択してください" }, class: "dep-input-form", id: "parent-form", required: "required"
-          #pull_down_category
-          -# %br/
+          #pull_down_dep
         .post-form
           = f.label :役職
           %br/

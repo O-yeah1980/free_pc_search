@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   }
 
   devise_scope :user do
+    get "children", to: "users/registrations#children"
+    get "grandchildren", to: "users/registrations#grandchildren"
     get "sign_in", to: "users/sessions#new"
     get "sign_out", to: "users/sessions#destroy"
   end

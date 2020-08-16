@@ -4,6 +4,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
+  def after_sign_up_path_for(resource)
+    root_path
+  end
   # GET /resource/sign_up
   def new
     @user = User.new
@@ -13,11 +16,30 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     @user = User.create(sign_up_params)
+    @parent = Department.where(ancestry: nil)
     bypass_sign_in(@user)
     if current_user
       redirect_to(root_path)
     else
       render :new
+    end
+  end
+
+  def children
+    respond_to do |format|
+      format.html
+      format.json do
+        @children = Department.find(params[:parent_id]).children
+      end
+    end
+  end
+  
+  def grandchildren
+    respond_to do |format|
+      format.html
+      format.json do
+        @grandchildren = Department.find(params[:child_id]).children
+      end
     end
   end
 
