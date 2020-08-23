@@ -24,6 +24,17 @@ es_3.children.create([{ name: "１グループ" }, { name: "２グループ" }, 
     user_id: 2
     )
 end
+
+10.times do |n|
+  Computer.create!(
+    pc_number: "AB123#{format("%03d", n + 50)}",
+    post_id: rand(1..2),
+    special_function: 0,
+    use_method: 1,
+    department_id: Department.find(6).id,
+    user_id: 2
+    )
+end
   
 18.times do |n|
   Computer.create!(
