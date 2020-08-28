@@ -11,280 +11,123 @@
       据置台
     .content__ctr__table
       %ul.content__ctr__table__left-left
-        %li.content__ctr__table__left-left__pc
-          .content__ctr__table__left-left__pc__number
-            AB123456
-          .content__ctr__table__left-left__pc__priority
-            ES1
-        %li.content__ctr__table__left-left__pc
-          .content__ctr__table__left-left__pc__number
-            AB123456
-          .content__ctr__table__left-left__pc__priority
-            ES1
-        %li.content__ctr__table__left-left__pc
-          .content__ctr__table__left-left__pc__number
-            AB123456
-          .content__ctr__table__left-left__pc__priority
-            ES1
-        %li.content__ctr__table__left-left__pc
-          .content__ctr__table__left-left__pc__number
-            AB123456
-          .content__ctr__table__left-left__pc__priority
-            ES1
-        %li.content__ctr__table__left-left__pc
-          .content__ctr__table__left-left__pc__number
-            AB123456
-          .content__ctr__table__left-left__pc__priority
-            ES1
+        - @computers.slice(0..4).each_with_index do |computer, i|
+          %li.content__ctr__table__left-left__pc
+            .content__ctr__table__left-left__pc__number
+              = computer.pc_number
+            .content__ctr__table__left-left__pc__priority
+              - if computer.department.name == "第１電子システム室"
+                ES1
+              - elsif computer.department.name == "第２電子システム室"
+                ES2
+              - else
+                ES3
+          - break if i == 4
       %ul.content__ctr__table__left-right
-        %li.content__ctr__table__left-right__pc
-          .content__ctr__table__left-right__pc__number
-            AB123789
-          .content__ctr__table__left-right__pc__priority
-            ES1
-        %li.content__ctr__table__left-right__pc
-          .content__ctr__table__left-right__pc__number
-            AB123789
-          .content__ctr__table__left-right__pc__priority
-            ES1
-        %li.content__ctr__table__left-right__pc
-          .content__ctr__table__left-right__pc__number
-            AB123789
-          .content__ctr__table__left-right__pc__priority
-            ES1
-        %li.content__ctr__table__left-right__pc
-          .content__ctr__table__left-right__pc__number
-            AB123789
-          .content__ctr__table__left-right__pc__priority
-            ES1
-        %li.content__ctr__table__left-right__pc
-          .content__ctr__table__left-right__pc__number
-            AB123789
-          .content__ctr__table__left-right__pc__priority
-            ES1
+        - @computers.slice(5..9).each_with_index do |computer, i|
+          %li.content__ctr__table__left-right__pc
+            .content__ctr__table__left-right__pc__number
+              = computer.pc_number
+            .content__ctr__table__left-right__pc__priority
+              - if computer.department.name == "第１電子システム室"
+                ES1
+              - elsif computer.department.name == "第２電子システム室"
+                ES2
+              - else
+                ES3
+          - break if i == 4
       %ul.content__ctr__table__ctr-1-left
-        %li.content__ctr__table__ctr-1-left__pc
-          .content__ctr__table__ctr-1-left__pc__number
-            AB123123
-          .content__ctr__table__ctr-1-left__pc__priority
-            ES2
-        %li.content__ctr__table__ctr-1-left__pc
-          .content__ctr__table__ctr-1-left__pc__number
-            AB123123
-          .content__ctr__table__ctr-1-left__pc__priority
-            ES2
-        %li.content__ctr__table__ctr-1-left__pc
-          .content__ctr__table__ctr-1-left__pc__number
-            AB123123
-          .content__ctr__table__ctr-1-left__pc__priority
-            ES2
-        %li.content__ctr__table__ctr-1-left__pc
-          .content__ctr__table__ctr-1-left__pc__number
-            AB123123
-          .content__ctr__table__ctr-1-left__pc__priority
-            ES2
-        %li.content__ctr__table__ctr-1-left__pc
-          .content__ctr__table__ctr-1-left__pc__number
-            AB123123
-          .content__ctr__table__ctr-1-left__pc__priority
-            ES2
+        - @computers.slice(10..14).each_with_index do |computer, i|
+          %li.content__ctr__table__ctr-1-left__pc
+            .content__ctr__table__ctr-1-left__pc__number
+              = computer.pc_number
+            .content__ctr__table__ctr-1-left__pc__priority
+              - if computer.department.name == "第１電子システム室"
+                ES1
+              - elsif computer.department.name == "第２電子システム室"
+                ES2
+              - else
+                ES3
+          - break if i == 4
       %ul.content__ctr__table__ctr-1-right
-        %li.content__ctr__table__ctr-1-right__pc
-          .content__ctr__table__ctr-1-right__pc__number
-            AB123456
-          .content__ctr__table__ctr-1-right__pc__priority
-            ES2
-        %li.content__ctr__table__ctr-1-right__pc
-          .content__ctr__table__ctr-1-right__pc__number
-            AB123456
-          .content__ctr__table__ctr-1-right__pc__priority
-            ES2
-        %li.content__ctr__table__ctr-1-right__pc
-          .content__ctr__table__ctr-1-right__pc__number
-            AB123456
-          .content__ctr__table__ctr-1-right__pc__priority
-            ES2
-        %li.content__ctr__table__ctr-1-right__pc
-          .content__ctr__table__ctr-1-right__pc__number
-            AB123456
-          .content__ctr__table__ctr-1-right__pc__priority
-            ES2
-        %li.content__ctr__table__ctr-1-right__pc
-          .content__ctr__table__ctr-1-right__pc__number
-            AB123456
-          .content__ctr__table__ctr-1-right__pc__priority
-            ES2
+        - @computers.slice(15..19).each_with_index do |computer, i|
+          %li.content__ctr__table__ctr-1-right__pc
+            .content__ctr__table__ctr-1-right__pc__number
+              = computer.pc_number
+            .content__ctr__table__ctr-1-right__pc__priority
+              - if computer.department.name == "第１電子システム室"
+                ES1
+              - elsif computer.department.name == "第２電子システム室"
+                ES2
+              - else
+                ES3
+          - break if i == 4
       %ul.content__ctr__table__ctr-2-left
-        %li.content__ctr__table__ctr-2-left__pc
-          .content__ctr__table__ctr-2-left__pc__number
-            AB123789
-          .content__ctr__table__ctr-2-left__pc__priority
-            ES3
-        %li.content__ctr__table__ctr-2-left__pc
-          .content__ctr__table__ctr-2-left__pc__number
-            AB123789
-          .content__ctr__table__ctr-2-left__pc__priority
-            ES3
-        %li.content__ctr__table__ctr-2-left__pc
-          .content__ctr__table__ctr-2-left__pc__number
-            AB123789
-          .content__ctr__table__ctr-2-left__pc__priority
-            ES3
-        %li.content__ctr__table__ctr-2-left__pc
-          .content__ctr__table__ctr-2-left__pc__number
-            AB123789
-          .content__ctr__table__ctr-2-left__pc__priority
-            ES3
-        %li.content__ctr__table__ctr-2-left__pc
-          .content__ctr__table__ctr-2-left__pc__number
-            AB123789
-          .content__ctr__table__ctr-2-left__pc__priority
-            ES3
+        - @computers.slice(20..24).each_with_index do |computer, i|
+          %li.content__ctr__table__ctr-2-left__pc
+            .content__ctr__table__ctr-2-left__pc__number
+              = computer.pc_number
+            .content__ctr__table__ctr-2-left__pc__priority
+              - if computer.department.name == "第１電子システム室"
+                ES1
+              - elsif computer.department.name == "第２電子システム室"
+                ES2
+              - else
+                ES3
+          - break if i == 4
       %ul.content__ctr__table__ctr-2-right
-        %li.content__ctr__table__ctr-2-right__pc
-          .content__ctr__table__ctr-2-right__pc__number
-            AB123123
-          .content__ctr__table__ctr-2-right__pc__priority
-            ES3
-        %li.content__ctr__table__ctr-2-right__pc
-          .content__ctr__table__ctr-2-right__pc__number
-            AB123123
-          .content__ctr__table__ctr-2-right__pc__priority
-            ES3
-        %li.content__ctr__table__ctr-2-right__pc
-          .content__ctr__table__ctr-2-right__pc__number
-            AB123123
-          .content__ctr__table__ctr-2-right__pc__priority
-            ES3
-        %li.content__ctr__table__ctr-2-right__pc
-          .content__ctr__table__ctr-2-right__pc__number
-            AB123123
-          .content__ctr__table__ctr-2-right__pc__priority
-            ES3
-        %li.content__ctr__table__ctr-2-right__pc
-          .content__ctr__table__ctr-2-right__pc__number
-            AB123123
-          .content__ctr__table__ctr-2-right__pc__priority
-            ES3
+        - @computers.slice(25..29).each_with_index do |computer, i|
+          %li.content__ctr__table__ctr-2-right__pc
+            .content__ctr__table__ctr-2-right__pc__number
+              = computer.pc_number
+            .content__ctr__table__ctr-2-right__pc__priority
+              - if computer.department.name == "第１電子システム室"
+                ES1
+              - elsif computer.department.name == "第２電子システム室"
+                ES2
+              - else
+                ES3
+          - break if i == 4
       %ul.content__ctr__table__right
-        %li.content__ctr__table__right__pc
-          .content__ctr__table__right__pc__number
-            AB123456
-          .content__ctr__table__right__pc__priority
-            ES1
-        %li.content__ctr__table__right__pc
-          .content__ctr__table__right__pc__number
-            AB123456
-          .content__ctr__table__right__pc__priority
-            ES1
-        %li.content__ctr__table__right__pc
-          .content__ctr__table__right__pc__number
-            AB123456
-          .content__ctr__table__right__pc__priority
-            ES1
-        %li.content__ctr__table__right__pc
-          .content__ctr__table__right__pc__number
-            AB123456
-          .content__ctr__table__right__pc__priority
-            ES1
-        %li.content__ctr__table__right__pc
-          .content__ctr__table__right__pc__number
-            AB123456
-          .content__ctr__table__right__pc__priority
-            ES1
+        - @computers.slice(70..74).each_with_index do |computer, i|
+          %li.content__ctr__table__right__pc
+            .content__ctr__table__right__pc__number
+              = computer.pc_number
+            .content__ctr__table__right__pc__priority
+              - if computer.department.name == "第１電子システム室"
+                ES1
+              - elsif computer.department.name == "第２電子システム室"
+                ES2
+              - else
+                ES3
+          - break if i == 4
   .content__remote
     .content__remote__title
       リモート台
     .content__remote__table
       %ul.content__remote__table__table-l
-        %li.content__remote__table__table-l__pc
-          .content__remote__table__table-l__pc__number
-            AB123789
-          .content__remote__table__table-l__pc__priority
-            ES1
-        %li.content__remote__table__table-l__pc
-          .content__remote__table__table-l__pc__number
-            AB123789
-          .content__remote__table__table-l__pc__priority
-            ES1
-        %li.content__remote__table__table-l__pc
-          .content__remote__table__table-l__pc__number
-            AB123789
-          .content__remote__table__table-l__pc__priority
-            ES1
-        %li.content__remote__table__table-l__pc
-          .content__remote__table__table-l__pc__number
-            AB123789
-          .content__remote__table__table-l__pc__priority
-            ES1
-        %li.content__remote__table__table-l__pc
-          .content__remote__table__table-l__pc__number
-            AB123789
-          .content__remote__table__table-l__pc__priority
-            ES1
-        %li.content__remote__table__table-l__pc
-          .content__remote__table__table-l__pc__number
-            AB123789
-          .content__remote__table__table-l__pc__priority
-            ES1
-        %li.content__remote__table__table-l__pc
-          .content__remote__table__table-l__pc__number
-            AB123789
-          .content__remote__table__table-l__pc__priority
-            ES1
-        %li.content__remote__table__table-l__pc
-          .content__remote__table__table-l__pc__number
-            AB123789
-          .content__remote__table__table-l__pc__priority
-            ES1
-        %li.content__remote__table__table-l__pc
-          .content__remote__table__table-l__pc__number
-            AB123789
-          .content__remote__table__table-l__pc__priority
-            ES1
+        - @computers.slice(26..34).each_with_index do |computer, i|
+          %li.content__remote__table__table-l__pc
+            .content__remote__table__table-l__pc__number
+              = computer.pc_number
+            .content__remote__table__table-l__pc__priority
+              - if computer.department.name == "第１電子システム室"
+                ES1
+              - elsif computer.department.name == "第２電子システム室"
+                ES2
+              - else
+                ES3
+          - break if i == 9
       %ul.content__remote__table__table-r
-        %li.content__remote__table__table-r__pc
-          .content__remote__table__table-r__pc__number
-            AB123789
-          .content__remote__table__table-r__pc__priority
-            ES2
-        %li.content__remote__table__table-r__pc
-          .content__remote__table__table-r__pc__number
-            AB123789
-          .content__remote__table__table-r__pc__priority
-            ES2
-        %li.content__remote__table__table-r__pc
-          .content__remote__table__table-r__pc__number
-            AB123789
-          .content__remote__table__table-r__pc__priority
-            ES2
-        %li.content__remote__table__table-r__pc
-          .content__remote__table__table-r__pc__number
-            AB123789
-          .content__remote__table__table-r__pc__priority
-            ES2
-        %li.content__remote__table__table-r__pc
-          .content__remote__table__table-r__pc__number
-            AB123789
-          .content__remote__table__table-r__pc__priority
-            ES2
-        %li.content__remote__table__table-r__pc
-          .content__remote__table__table-r__pc__number
-            AB123789
-          .content__remote__table__table-r__pc__priority
-            ES2
-        %li.content__remote__table__table-r__pc
-          .content__remote__table__table-r__pc__number
-            AB123789
-          .content__remote__table__table-r__pc__priority
-            ES2
-        %li.content__remote__table__table-r__pc
-          .content__remote__table__table-r__pc__number
-            AB123789
-          .content__remote__table__table-r__pc__priority
-            ES2
-        %li.content__remote__table__table-r__pc
-          .content__remote__table__table-r__pc__number
-            AB123789
-          .content__remote__table__table-r__pc__priority
-            ES2
+        - @computers.slice(35..43).each_with_index do |computer, i|
+          %li.content__remote__table__table-r__pc
+            .content__remote__table__table-r__pc__number
+              = computer.pc_number
+            .content__remote__table__table-r__pc__priority
+              - if computer.department.name == "第１電子システム室"
+                ES1
+              - elsif computer.department.name == "第２電子システム室"
+                ES2
+              - else
+                ES3
+          - break if i == 9

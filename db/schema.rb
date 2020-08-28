@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_02_090032) do
+ActiveRecord::Schema.define(version: 2020_08_16_015017) do
+
+  create_table "computers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "pc_number", null: false
+    t.integer "post_id", null: false
+    t.integer "special_function"
+    t.integer "use_method", null: false
+    t.bigint "department_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["department_id"], name: "index_computers_on_department_id"
+    t.index ["user_id"], name: "index_computers_on_user_id"
+  end
 
   create_table "departments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -36,5 +49,7 @@ ActiveRecord::Schema.define(version: 2020_08_02_090032) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "computers", "departments"
+  add_foreign_key "computers", "users"
   add_foreign_key "users", "departments"
 end
