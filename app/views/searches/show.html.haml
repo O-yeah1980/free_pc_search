@@ -1,2 +1,7 @@
 .show-content
   = @computer.pc_number
+  = @computer.department.name
+  - if @computer.use_method == 1
+    据置
+  - else
+    リモート
