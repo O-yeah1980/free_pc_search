@@ -1,7 +1,31 @@
-.show-content
-  = @computer.pc_number
-  = @computer.department.name
-  - if @computer.use_method == 1
-    据置
-  - else
-    リモート
+.show-wrapper
+  .show-content
+    .show-content__header
+      = @computer.pc_number
+
+    .show-content__content
+      .show-content__content__priority-dep
+        .show-content__content__priority-dep__left
+        .show-content__content__priority-dep__right
+      .show-content__content__priority-post
+        .show-content__content__priority-post__left
+        .show-content__content__priority-post__right
+      .show-content__content__use-method
+        .show-content__content__use-method__left
+        .show-content__content__use-method__right
+      .show-content__content__special-function
+        .show-content__content__special-function__left
+        .show-content__content__special-function__right
+      .show-content__content__user
+        .show-content__content__user__left
+        .show-content__content__user__right
+
+    .show-content__footer
+      .show-content__footer__left
+      .show-content__footer__right
+
+  -# = @computer.department.name
+  -# - if @computer.use_method == 1
+  -#   据置
+  -# - else
+  -#   リモート
