@@ -6,26 +6,44 @@
     .show-content__content
       .show-content__content__priority-dep
         .show-content__content__priority-dep__left
+          優先部署
         .show-content__content__priority-dep__right
+          = @computer.department.name
       .show-content__content__priority-post
         .show-content__content__priority-post__left
+          優先者
         .show-content__content__priority-post__right
+          - if @computer.post_id == 1
+            プロパー・BP
+          - else
+            委託
       .show-content__content__use-method
         .show-content__content__use-method__left
+          使用方法
         .show-content__content__use-method__right
+          - if @computer.use_method == 1
+            据置
+          - else
+            リモート
       .show-content__content__special-function
         .show-content__content__special-function__left
+          特殊機能
         .show-content__content__special-function__right
+          - if @computer.special_function == 0
+            なし
+          - else
+            回路作成機能
+
       .show-content__content__user
         .show-content__content__user__left
+          PC使用ユーザー
         .show-content__content__user__right
-
+          - if @computer&.user_id == nil
+            このPCの使用者はいません
+          - else
+            = @computer&.user&.last_name
     .show-content__footer
       .show-content__footer__left
+        割当変更
       .show-content__footer__right
-
-  -# = @computer.department.name
-  -# - if @computer.use_method == 1
-  -#   据置
-  -# - else
-  -#   リモート
+        使用する

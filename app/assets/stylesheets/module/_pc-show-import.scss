@@ -1,0 +1,15 @@
+&__left {
+  width: calc(30% - 1px);
+  height: 100%;
+  background-color: red;
+  text-align: center;
+  line-height: calc(468px / 5);
+  border-right: 1px solid #fafafa;
+}
+&__right {
+  width: 70%;
+  height: 100%;
+  background-color: blue;
+  text-align: center;
+  line-height: calc(468px / 5);
+}
