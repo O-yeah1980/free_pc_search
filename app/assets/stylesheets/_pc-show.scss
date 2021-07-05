@@ -1,0 +1,88 @@
+.show-wrapper {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  .show-content {
+    width: 500px;
+    height: 100%;
+    background-color: #560;
+    border: 1px solid #fafafa;
+    &__header {
+      width: 100%;
+      height: 40px;
+      background-color: #dad;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      border-bottom: 1px solid #fafafa;
+    }
+    &__content {
+      width: 100%;
+      height: 470px;
+      background-color: #1a3;
+      &__priority-dep {
+        width: 100%;
+        height: calc(470px / 5);
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #fafafa;
+        @import "module/pc-show-import";
+      }
+      &__priority-post {
+        width: 100%;
+        height: calc(470px / 5);
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #fafafa;
+        @import "module/pc-show-import";
+      }
+      &__use-method {
+        width: 100%;
+        height: calc(470px / 5);
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #fafafa;
+        @import "module/pc-show-import";
+      }
+      &__special-function {
+        width: 100%;
+        height: calc(470px / 5);
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #fafafa;
+        @import "module/pc-show-import";
+      }
+      &__user {
+        width: 100%;
+        height: calc(470px / 5);
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #fafafa;
+        @import "module/pc-show-import";
+      }
+    }
+    &__footer {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #fafafa;
+      &__left {
+        width: calc(30% - 1px);
+        height: 100%;
+        background-color: red;
+        text-align: center;
+        line-height: 40px;
+        border-right: 1px solid #fafafa;
+      }
+      &__right {
+        width: 70%;
+        height: 100%;
+        background-color: blue;
+        line-height: 40px;
+        text-align: center;
+      }
+    }
+  }
+}
